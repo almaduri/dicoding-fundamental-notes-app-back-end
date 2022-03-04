@@ -16,5 +16,17 @@ class NotesService {
     };
 
     this._notes.push(newNote);
+
+    const isSuccess = this._notes.filter((note) => note.id === id).length > 0;
+
+    if (!isSuccess) {
+      throw new Error('Catatan gagal ditambahkan');
+    }
+
+    return id;
+  }
+
+  getNotes() {
+    return this._notes;
   }
 }
