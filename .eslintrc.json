@@ -10,7 +10,6 @@
         "ecmaVersion": 2020
     },
     "rules": {
-        "linebreak-style": ["error", "windows"],
         "no-console": "off"
     }
 }

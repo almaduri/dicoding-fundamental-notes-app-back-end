@@ -37,4 +37,8 @@ class NotesService {
     }
     return note;
   }
+
+  editNoteById(id, { title, body, tags }) {
+    
+  }
 }
