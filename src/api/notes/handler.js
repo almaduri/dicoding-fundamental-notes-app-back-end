@@ -38,12 +38,19 @@ class NoteHandler {
     };
   }
 
-  getNoteByIdHandler() {
-
+  getNoteByIdHandler(request) {
+    const { id } = request.params;
+    const note = this._service.getNoteById(id);
+    return{
+      status: 'success',
+      data: {
+        note,
+      },
+    };
   }
 
   putNoteByIdHandler() {
-
+    
   }
 
   deleteNoteByIdHandler() {
