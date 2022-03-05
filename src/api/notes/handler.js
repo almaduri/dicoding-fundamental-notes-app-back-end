@@ -29,7 +29,13 @@ class NoteHandler {
   }
 
   getNotesHandler() {
-
+    const notes = this._service.getNotes();
+    return {
+      status: 'success',
+      data: {
+        notes,
+      },
+    };
   }
 
   getNoteByIdHandler() {
