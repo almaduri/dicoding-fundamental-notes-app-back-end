@@ -78,8 +78,15 @@ class NoteHandler {
     }
   }
 
-  deleteNoteByIdHandler() {
+  deleteNoteByIdHandler(request, h) {
+    const { id } = request.params;
 
+    this._service.deleteNoteById(id);
+
+    return {
+      status: 'success',
+      message: 'Catatan berhasil dihapus',
+    };
   }
 }
 
