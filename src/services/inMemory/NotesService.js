@@ -46,7 +46,7 @@ class NotesService {
 
     const updatedAt = new Date().toISOString();
 
-    this._notes = {
+    this._notes[index] = {
       ...this._notes[index],
       title,
       tags,
