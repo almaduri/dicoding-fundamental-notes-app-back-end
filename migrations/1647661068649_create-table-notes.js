@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 
 exports.up = (pgm) => {
-  pgm.crateTable('notes', {
+  pgm.createTable('notes', {
     id: {
       type: 'VARCHAR(50)',
       primaryKey: true,
